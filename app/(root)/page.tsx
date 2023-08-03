@@ -1,4 +1,10 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
-    return <p>Hello Admin Dashboard</p>;
+    return (
+        <div className="p-4">
+            <Button size={"sm"} >Click Me</Button>
+        </div>
+    );
   }
   

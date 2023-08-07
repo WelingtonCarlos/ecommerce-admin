@@ -7,6 +7,7 @@ import { Store } from "@prisma/client";
 import { Trash } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import { useOrigin } from "@/hooks/use-origin";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useParams, useRouter } from "next/navigation";
 
@@ -43,6 +44,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
 
   const params = useParams();
   const router = useRouter();
+  const origin = useOrigin()
 
   const form = useForm<SettingsFormValues>({
     resolver: zodResolver(formSchema),
